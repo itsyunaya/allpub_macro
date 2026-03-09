@@ -2,11 +2,12 @@
 name = "allpub_macro"
 version = "0.1.0"
 authors = ["itsyunaya <40719746+itsyunaya@users.noreply.github.com>"]
-description = "A proc macro to make a module and all of its submodules public automatically"
+description = "A procedural macro to make all items in a module public by default."
 keywords = ["proc_macro", "procmacro"]
 edition = "2024"
 
 [lib]
+path = "src/lib.rs"
 proc-macro = true
 
 [dependencies]

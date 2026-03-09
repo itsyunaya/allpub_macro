@@ -11,7 +11,7 @@
 //!
 //! ```toml
 //! [dependencies]
-//! allpub_macro = "0.1"
+//! allpub_macro = "0.1.0"
 //! ```
 //!
 //! Then apply the attribute to any inline module:
