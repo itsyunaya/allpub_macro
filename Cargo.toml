@@ -1,0 +1,15 @@
+[package]
+name = "allpub_macro"
+version = "0.1.0"
+authors = ["itsyunaya <40719746+itsyunaya@users.noreply.github.com>"]
+description = "A proc macro to make a module and all of its submodules public automatically"
+keywords = ["proc_macro", "procmacro"]
+edition = "2024"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+quote = "1"
+syn = { version = "2.0.117", features = ["full"] }
+
