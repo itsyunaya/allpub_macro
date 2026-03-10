@@ -47,6 +47,8 @@ use syn::{parse_macro_input, Item, ItemMod, Visibility, token::Pub, ImplItem};
 /// Basic usage
 ///
 /// ```rust
+/// use allpub_macro::all_pub;
+///
 /// #[all_pub]
 /// mod myModule {
 ///     fn foo() {}         // becomes pub fn foo()
@@ -58,6 +60,8 @@ use syn::{parse_macro_input, Item, ItemMod, Visibility, token::Pub, ImplItem};
 /// Nested modules
 ///
 /// ```rust
+/// use allpub_macro::all_pub;
+///
 /// #[all_pub]
 /// mod myModA {
 ///     mod myModB {
@@ -77,7 +81,6 @@ use syn::{parse_macro_input, Item, ItemMod, Visibility, token::Pub, ImplItem};
 #[proc_macro_attribute]
 pub fn all_pub(_: TokenStream, input: TokenStream) -> TokenStream {
     let mut input = parse_macro_input!(input as ItemMod);
-
     if let Some((_, items)) = &mut input.content {
         for item in items.iter_mut() {
             set_pub(item);
